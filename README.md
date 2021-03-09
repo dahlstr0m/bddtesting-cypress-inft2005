@@ -27,12 +27,12 @@ npm start
 
 [http://localhost:8080](http://localhost:8080)
 
-5. Kjør cypress:
+5. Kjør testene
 
-Åpne et nytt konsoll i prosjektmappen. 
+Det er lagt inn script-definisjon i package.json så vi kan enkelt kjøre testene med:
 
 ```
-npx cypress open
+npm test
 ```
 
 Hvis du får feilmelding som sier at cypress executable ikke er funnet kan du kjøre følgende før du prøver å starte cypress på nytt (jeg måtte det):
@@ -43,16 +43,9 @@ npx cypress install
 
 (npx er inkludert med npm > v5.2)
 
-6. Kjør testene
-
-Det er lagt inn script-definisjon i package.json så vi kan enkelt kjøre testene med:
-
-```
-npm test
-```
-
-7. Sjekk resultatet
+6. Sjekk resultatet
 
 Denne testen kjørte nå i en "headless" eller virtuell browser. Dette betyr at vi også kan kjøre testene som endel av et skript, f.eks på en CI-server. 
-Resultatet vises på konsollet, men kan også sees i en video under mappen *cypress/video*.
-Ved veil kommer det også skjermdumper under *cypress/screenshots*.
+Kjøringen vises altså ikke i en nettleser, men vi får en testrapport på konsollet.
+En video fra den virtuelle nettleseren kommer imidlertid i mappen *cypress/video* etter kjøring.
+Ved feil kommer det også skjermdumper under *cypress/screenshots*.
