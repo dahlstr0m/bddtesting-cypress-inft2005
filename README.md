@@ -13,7 +13,7 @@ git clone https://gitlab.stud.idi.ntnu.no/nilstesd/cypress-bdd-start.git
 2. Installer avhengigheter med npm:
 
 ```
-cd cypress-start
+cd cypress-bdd-start
 npm install
 ```
 
