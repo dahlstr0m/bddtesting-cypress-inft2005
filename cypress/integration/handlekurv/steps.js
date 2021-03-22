@@ -23,10 +23,9 @@ When(/^jeg legger inn varer og kvanta$/, () => {
 });
 
 Then(/^skal handlekurven inneholde det jeg har lagt inn$/, () => {
-    // Sjekk innholdet i lista
+    // TODO: Verifiser innholdet i lista med should()
 });
 
 And(/^den skal ha riktig totalpris$/, function () {
-    cy.get('#price').should('have.text', '33');
+        cy.get('#price').should('have.text', '33');
 });
-
