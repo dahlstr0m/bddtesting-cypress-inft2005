@@ -12,11 +12,10 @@ test:
   stage: test
   script:
     # install dependencies
-    - npm ci
-    # start the server in the background
-    - npm run start:ci &
+    - npm install
+
     # run Cypress tests
-    - npm start
+    - npm test
   artifacts:
     when: always
     paths:
