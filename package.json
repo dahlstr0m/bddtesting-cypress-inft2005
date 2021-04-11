@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node ./src/index.js",
-    "test": "cypress run --record --spec \"**/*.feature\""
+    "test": "cypress run --spec \"**/*.feature\""
   },
   "author": "Nils Tesdal",
   "dependencies": {
