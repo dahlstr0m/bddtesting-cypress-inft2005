@@ -14,7 +14,7 @@ cache:
     - node_modules
 
 test:
-  image: cypress/browsers:node12.14.1-chrome85-ff81
+  image: cypress/base:10
   stage: test
   script:
     # install dependencies
