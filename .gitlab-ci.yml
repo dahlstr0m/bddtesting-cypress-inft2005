@@ -14,8 +14,8 @@ test:
     # install dependencies
     - npm install
 
-    # Kjør express-serveren
-    - npm start
+    # Kjør express-serveren i bakgrunnen
+    - npm start &
 
     # run Cypress tests
     - npm test
