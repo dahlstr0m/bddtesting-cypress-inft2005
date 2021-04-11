@@ -14,6 +14,9 @@ test:
     # install dependencies
     - npm install
 
+    # Kjør express-serveren
+    - npm start
+
     # run Cypress tests
     - npm test
   artifacts:
