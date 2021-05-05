@@ -34,7 +34,8 @@ Then(/^skal handlekurven inneholde det jeg har lagt inn$/, () => {
 });
 
 And(/^den skal ha riktig totalpris$/, () => {
-  cy.get("#price").should("have.text", "33");
+  // Ønsker at testen skal feile, endrer fra 33 til 105
+  cy.get("#price").should("have.text", "105");
 });
 
 // Given allerede definert
