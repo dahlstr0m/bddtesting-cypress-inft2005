@@ -1,0 +1,32 @@
+stages:
+  - test
+
+variables:
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .npm
+    - cache/Cypress
+    - node_modules
+
+test:
+  image: cypress/base:10
+  stage: test
+  script:
+    # i dependencies
+    - npm ci
+
+    # Kjør express-serveren i bakgrunnen (& er i bakgrunnen)
+    - npm start &
+
+    # Kjør testene
+    - npm test
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos
+      - cypress/screenshots
+    expire_in: 1 day
