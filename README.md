@@ -1,19 +1,20 @@
 # BDD-testing med cucumber og cypress
+Kvalitet i og testing av programvaresystemer [INFT2005](https://www.ntnu.no/studier/emner/INFT2005) Vår 2021
 
-Dette er en superenkel eksempelapplikasjon som er satt opp med BDD-testing med cucumber og cypress. Applikasjonen server en enkel webside med express.js.
+Dette er en superenkel eksempelapplikasjon som er satt opp med BDD-testing med cucumber og cypress. Applikasjonen serverer en enkel nettbutikk med express.js, og tester funksjonalitetene i denne gjennom cucumber og cypress.
 
 ### Instruksjoner
 
 1. Klon prosjektet:
 
 ```
-git clone https://gitlab.stud.idi.ntnu.no/nilstesd/cypress-bdd-start.git
+git clone https://github.com/dahlstr0m/bddtesting-cypress-inft2005.git
 ```
 
 2. Installer avhengigheter med npm:
 
 ```
-cd cypress-bdd-start
+cd bddtesting-cypress-inft2005
 npm install
 ```
 
@@ -35,17 +36,8 @@ Det er lagt inn script-definisjon i package.json så vi kan enkelt kjøre testen
 npm test
 ```
 
-Hvis du får feilmelding som sier at cypress executable ikke er funnet kan du kjøre følgende før du prøver å starte cypress på nytt (jeg måtte det):
-
-```
-npx cypress install
-```
-
-(npx er inkludert med npm > v5.2)
-
 6. Sjekk resultatet
 
-Denne testen kjørte nå i en "headless" eller virtuell browser. Dette betyr at vi også kan kjøre testene som endel av et skript, f.eks på en CI-server. 
-Kjøringen vises altså ikke i en nettleser, men vi får en testrapport på konsollet.
-En video fra den virtuelle nettleseren kommer imidlertid i mappen *cypress/video* etter kjøring.
+Denne testen kjørte nå i en "headless" eller virtuell browser, og testrapport vises i konsollet.
+En video fra den virtuelle nettleseren kommer i mappen *cypress/video* etter kjøring.
 Ved feil kommer det også skjermdumper under *cypress/screenshots*.
